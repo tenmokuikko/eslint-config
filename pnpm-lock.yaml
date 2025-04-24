@@ -4,6 +4,117 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@antfu/install-pkg':
+      specifier: ^1.0.0
+      version: 1.0.0
+    '@clack/prompts':
+      specifier: ^0.10.1
+      version: 0.10.1
+    '@eslint-community/eslint-plugin-eslint-comments':
+      specifier: ^4.5.0
+      version: 4.5.0
+    '@eslint-react/eslint-plugin':
+      specifier: ^1.48.4
+      version: 1.48.4
+    '@eslint/markdown':
+      specifier: ^6.4.0
+      version: 6.4.0
+    '@rslib/core':
+      specifier: ^0.6.7
+      version: 0.6.7
+    '@stylistic/eslint-plugin':
+      specifier: ^4.2.0
+      version: 4.2.0
+    '@types/node':
+      specifier: ^22.14.1
+      version: 22.14.1
+    '@typescript-eslint/eslint-plugin':
+      specifier: ^8.31.0
+      version: 8.31.0
+    '@typescript-eslint/parser':
+      specifier: ^8.31.0
+      version: 8.31.0
+    eslint:
+      specifier: ^9.25.1
+      version: 9.25.1
+    eslint-config-flat-gitignore:
+      specifier: ^2.1.0
+      version: 2.1.0
+    eslint-flat-config-utils:
+      specifier: ^2.0.1
+      version: 2.0.1
+    eslint-merge-processors:
+      specifier: ^2.0.0
+      version: 2.0.0
+    eslint-plugin-antfu:
+      specifier: ^3.1.1
+      version: 3.1.1
+    eslint-plugin-command:
+      specifier: ^3.2.0
+      version: 3.2.0
+    eslint-plugin-format:
+      specifier: ^1.0.1
+      version: 1.0.1
+    eslint-plugin-import-x:
+      specifier: ^4.10.6
+      version: 4.10.6
+    eslint-plugin-jsdoc:
+      specifier: ^50.6.10
+      version: 50.6.10
+    eslint-plugin-jsonc:
+      specifier: ^2.20.0
+      version: 2.20.0
+    eslint-plugin-n:
+      specifier: ^17.17.0
+      version: 17.17.0
+    eslint-plugin-perfectionist:
+      specifier: ^4.12.2
+      version: 4.12.2
+    eslint-plugin-pnpm:
+      specifier: ^0.3.1
+      version: 0.3.1
+    eslint-plugin-react-hooks:
+      specifier: ^5.2.0
+      version: 5.2.0
+    eslint-plugin-react-refresh:
+      specifier: ^0.4.20
+      version: 0.4.20
+    eslint-plugin-regexp:
+      specifier: ^2.7.0
+      version: 2.7.0
+    eslint-plugin-toml:
+      specifier: ^0.12.0
+      version: 0.12.0
+    eslint-plugin-unicorn:
+      specifier: ^58.0.0
+      version: 58.0.0
+    eslint-plugin-unused-imports:
+      specifier: ^4.1.4
+      version: 4.1.4
+    eslint-plugin-yml:
+      specifier: ^1.18.0
+      version: 1.18.0
+    globals:
+      specifier: ^16.0.0
+      version: 16.0.0
+    jsonc-eslint-parser:
+      specifier: ^2.4.0
+      version: 2.4.0
+    local-pkg:
+      specifier: ^1.1.1
+      version: 1.1.1
+    toml-eslint-parser:
+      specifier: ^0.10.0
+      version: 0.10.0
+    typescript:
+      specifier: ^5.8.3
+      version: 5.8.3
+    yaml-eslint-parser:
+      specifier: ^1.3.0
+      version: 1.3.0
+
 importers:
 
   .:
@@ -12,141 +123,147 @@ importers:
         specifier: workspace:*
         version: link:packages/common
       eslint:
-        specifier: ^9.25.1
+        specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       typescript:
-        specifier: ^5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
 
   packages/common:
     dependencies:
       '@antfu/install-pkg':
-        specifier: ^1.0.0
+        specifier: 'catalog:'
         version: 1.0.0
       '@clack/prompts':
-        specifier: ^0.10.1
+        specifier: 'catalog:'
         version: 0.10.1
       '@eslint-community/eslint-plugin-eslint-comments':
-        specifier: ^4.5.0
+        specifier: 'catalog:'
         version: 4.5.0(eslint@9.25.1(jiti@2.4.2))
       '@eslint/markdown':
-        specifier: ^6.4.0
+        specifier: 'catalog:'
         version: 6.4.0
       '@stylistic/eslint-plugin':
-        specifier: ^4.2.0
+        specifier: 'catalog:'
         version: 4.2.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.31.0
+        specifier: 'catalog:'
         version: 8.31.0(@typescript-eslint/parser@8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       '@typescript-eslint/parser':
-        specifier: ^8.31.0
+        specifier: 'catalog:'
         version: 8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint:
-        specifier: ^9.25.1
+        specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       eslint-config-flat-gitignore:
-        specifier: ^2.1.0
+        specifier: 'catalog:'
         version: 2.1.0(eslint@9.25.1(jiti@2.4.2))
       eslint-flat-config-utils:
-        specifier: ^2.0.1
+        specifier: 'catalog:'
         version: 2.0.1
       eslint-merge-processors:
-        specifier: ^2.0.0
+        specifier: 'catalog:'
         version: 2.0.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-antfu:
-        specifier: ^3.1.1
+        specifier: 'catalog:'
         version: 3.1.1(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-command:
-        specifier: ^3.2.0
+        specifier: 'catalog:'
         version: 3.2.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-format:
-        specifier: ^1.0.1
+        specifier: 'catalog:'
         version: 1.0.1(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-import-x:
-        specifier: ^4.10.6
+        specifier: 'catalog:'
         version: 4.10.6(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint-plugin-jsdoc:
-        specifier: ^50.6.10
+        specifier: 'catalog:'
         version: 50.6.10(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-jsonc:
-        specifier: ^2.20.0
+        specifier: 'catalog:'
         version: 2.20.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-n:
-        specifier: ^17.17.0
+        specifier: 'catalog:'
         version: 17.17.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-perfectionist:
-        specifier: ^4.12.2
+        specifier: 'catalog:'
         version: 4.12.2(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint-plugin-pnpm:
-        specifier: ^0.3.1
+        specifier: 'catalog:'
         version: 0.3.1(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-regexp:
-        specifier: ^2.7.0
+        specifier: 'catalog:'
         version: 2.7.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-toml:
-        specifier: ^0.12.0
+        specifier: 'catalog:'
         version: 0.12.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-unicorn:
-        specifier: ^58.0.0
+        specifier: 'catalog:'
         version: 58.0.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-unused-imports:
-        specifier: ^4.1.4
+        specifier: 'catalog:'
         version: 4.1.4(@typescript-eslint/eslint-plugin@8.31.0(@typescript-eslint/parser@8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-yml:
-        specifier: ^1.18.0
+        specifier: 'catalog:'
         version: 1.18.0(eslint@9.25.1(jiti@2.4.2))
       globals:
-        specifier: ^16.0.0
+        specifier: 'catalog:'
         version: 16.0.0
       jsonc-eslint-parser:
-        specifier: ^2.4.0
+        specifier: 'catalog:'
         version: 2.4.0
       local-pkg:
-        specifier: ^1.1.1
+        specifier: 'catalog:'
         version: 1.1.1
       toml-eslint-parser:
-        specifier: ^0.10.0
+        specifier: 'catalog:'
         version: 0.10.0
       yaml-eslint-parser:
-        specifier: ^1.3.0
+        specifier: 'catalog:'
         version: 1.3.0
     devDependencies:
       '@rslib/core':
-        specifier: ^0.6.7
+        specifier: 'catalog:'
         version: 0.6.7(typescript@5.8.3)
       '@types/node':
-        specifier: ^22.14.1
+        specifier: 'catalog:'
         version: 22.14.1
 
   packages/react:
     dependencies:
       '@eslint-react/eslint-plugin':
-        specifier: ^1.48.4
+        specifier: 'catalog:'
         version: 1.48.4(eslint@9.25.1(jiti@2.4.2))(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3)
+      '@tanstack/eslint-plugin-query':
+        specifier: ^5.73.3
+        version: 5.73.3(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
+      '@tanstack/eslint-plugin-router':
+        specifier: ^1.115.0
+        version: 1.115.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       '@tenmokuikko/eslint-common':
         specifier: workspace:*
         version: link:../common
       eslint:
-        specifier: ^9.25.1
+        specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       eslint-config-flat-gitignore:
-        specifier: ^2.1.0
+        specifier: 'catalog:'
         version: 2.1.0(eslint@9.25.1(jiti@2.4.2))
       eslint-flat-config-utils:
-        specifier: ^2.0.1
+        specifier: 'catalog:'
         version: 2.0.1
       eslint-plugin-react-hooks:
-        specifier: ^5.2.0
+        specifier: 'catalog:'
         version: 5.2.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-react-refresh:
-        specifier: ^0.4.20
+        specifier: 'catalog:'
         version: 0.4.20(eslint@9.25.1(jiti@2.4.2))
       local-pkg:
-        specifier: ^1.1.1
+        specifier: 'catalog:'
         version: 1.1.1
     devDependencies:
       '@rslib/core':
-        specifier: ^0.6.7
+        specifier: 'catalog:'
         version: 0.6.7(typescript@5.8.3)
 
 packages:
@@ -501,6 +618,16 @@ packages:
 
   '@swc/helpers@0.5.17':
     resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
+
+  '@tanstack/eslint-plugin-query@5.73.3':
+    resolution: {integrity: sha512-GmUtnOkRzDuNOq96g3eW5ADKC1nWfrM9RI0kRyQVr87rOl6y+PUgkuVaPxh3R2C0EVODxCS07b9aaWphidl/OA==}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+
+  '@tanstack/eslint-plugin-router@1.115.0':
+    resolution: {integrity: sha512-vwKP9NjzAQ2nU3qADDoTSTxD1vNduLcK0312AWkXkicCWUZQZJtmRuZXPk9cEfuzDD2BAJCIUmlaF1K0vq4oRw==}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
 
   '@tybys/wasm-util@0.9.0':
     resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
@@ -2234,6 +2361,22 @@ snapshots:
   '@swc/helpers@0.5.17':
     dependencies:
       tslib: 2.8.1
+
+  '@tanstack/eslint-plugin-query@5.73.3(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
+    dependencies:
+      '@typescript-eslint/utils': 8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
+      eslint: 9.25.1(jiti@2.4.2)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  '@tanstack/eslint-plugin-router@1.115.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
+    dependencies:
+      '@typescript-eslint/utils': 8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
+      eslint: 9.25.1(jiti@2.4.2)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
 
   '@tybys/wasm-util@0.9.0':
     dependencies:

@@ -4,8 +4,11 @@ import type { FlatConfigComposer } from "eslint-flat-config-utils";
 import { disables } from "@tenmokuikko/eslint-common/configs";
 import { flatConfigProps, getCommonConfig, getComposer, getOverrides, resolveSubOptions } from "@tenmokuikko/eslint-common/factory";
 import { isInEditorEnv } from "@tenmokuikko/eslint-common/utils";
+import { isPackageExists } from "local-pkg";
 import { jsx } from "./plugins/jsx";
+import { query } from "./plugins/query";
 import { react } from "./plugins/react";
+import { router } from "./plugins/router";
 
 export function tenmokuikko(
   options: OptionsConfig & Omit<TypedFlatConfigItem, "files"> = {},
@@ -42,7 +45,12 @@ export function tenmokuikko(
       tsconfigPath,
     }),
   );
-
+  if (isPackageExists("@tanstack/react-router")) {
+    configs.push(router());
+  }
+  if (isPackageExists("@tanstack/react-query")) {
+    configs.push(query());
+  }
   configs.push(
     disables(),
   );

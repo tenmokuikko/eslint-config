@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "@eslint-react/eslint-plugin": "catalog:",
+    "@tanstack/eslint-plugin-query": "catalog:",
+    "@tanstack/eslint-plugin-router": "catalog:",
     "@tenmokuikko/eslint-common": "workspace:*",
     "eslint": "catalog:",
     "eslint-config-flat-gitignore": "catalog:",
