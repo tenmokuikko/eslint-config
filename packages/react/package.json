@@ -1,0 +1,35 @@
+{
+  "name": "@tenmokuikko/eslint-react",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.9.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "build:watch": "rslib build --watch"
+  },
+  "dependencies": {
+    "@eslint-react/eslint-plugin": "catalog:",
+    "@tenmokuikko/eslint-common": "workspace:*",
+    "eslint": "catalog:",
+    "eslint-config-flat-gitignore": "catalog:",
+    "eslint-flat-config-utils": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "local-pkg": "catalog:"
+  },
+  "devDependencies": {
+    "@rslib/core": "catalog:"
+  }
+}
