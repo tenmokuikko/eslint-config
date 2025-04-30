@@ -1,0 +1,36 @@
+{
+  "name": "@tenmokuikko/eslint-angular",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.9.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "exports": {
+    ".": "./dist/index.js",
+    "./configs": {
+      "types": "./dist/configs/index.d.ts",
+      "import": "./dist/configs.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "build:watch": "rslib build --watch"
+  },
+  "dependencies": {
+    "@tenmokuikko/eslint-common": "workspace:*",
+    "eslint": "catalog:",
+    "eslint-config-flat-gitignore": "catalog:",
+    "eslint-flat-config-utils": "catalog:",
+    "local-pkg": "catalog:"
+  },
+  "devDependencies": {
+    "@rslib/core": "catalog:"
+  }
+}

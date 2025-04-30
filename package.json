@@ -19,5 +19,10 @@
     "eslint-typegen": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@angular-eslint/eslint-plugin": "^19.3.0",
+    "@angular-eslint/eslint-plugin-template": "^19.3.0",
+    "@angular-eslint/template-parser": "^19.3.0"
   }
 }
