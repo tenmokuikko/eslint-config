@@ -1,8 +1,10 @@
 import type { Linter } from "eslint";
-import type { Awaitable, OptionsConfig, OptionsFormatters, OptionsOverrides, StylisticConfig, TypedFlatConfigItem } from "./types";
+import type { RuleOptions } from "./typegen";
+import type { Awaitable, ConfigNames, OptionsConfig, OptionsFormatters, OptionsOverrides, StylisticConfig, TypedFlatConfigItem } from "./types";
 import { FlatConfigComposer } from "eslint-flat-config-utils";
 import { isPackageExists } from "local-pkg";
 import { command, comments, disables, formatters, ignores, imports, javascript, jsdoc, jsonc, markdown, node, perfectionist, pnpm, regexp, sortPackageJson, sortTsconfig, stylistic, toml, typescript, unicorn } from "./configs";
+
 import { interopDefault, isInEditorEnv } from "./utils";
 
 export const flatConfigProps = [
@@ -32,25 +34,25 @@ export const defaultPluginRenaming = {
 export type ResolvedOptions<T> = T extends boolean
   ? never
   : NonNullable<T>;
-export function resolveSubOptions<K extends keyof OptionsConfig>(
-  options: OptionsConfig,
+export function resolveSubOptions<T extends OptionsConfig, K extends keyof T>(
+  options: T,
   key: K,
-): ResolvedOptions<OptionsConfig[K]> {
+): ResolvedOptions<T[K]> {
   return typeof options[key] === "boolean"
     ? {} as any
     : options[key] || {} as any;
 }
 
-export function getOverrides<K extends keyof OptionsConfig>(
-  options: OptionsConfig,
+export function getOverrides<T extends OptionsConfig, K extends keyof T>(
+  options: T,
   key: K,
-): Partial<Linter.RulesRecord> {
+): Partial<Linter.RulesRecord & RuleOptions> {
   const sub = resolveSubOptions(options, key);
   return {
     ...(options.overrides as any)?.[key],
-    ..."overrides" in sub
-      ? sub.overrides
-      : {},
+    ...("overrides" in sub
+      ? (sub.overrides as object)
+      : {}),
   };
 }
 
@@ -157,7 +159,7 @@ export function getComposer(
   isInEditor: boolean,
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
 ) {
-  let composer = new FlatConfigComposer<TypedFlatConfigItem, "">();
+  let composer = new FlatConfigComposer<TypedFlatConfigItem, ConfigNames>();
   composer = composer
     .append(
       ...configs,
@@ -182,7 +184,7 @@ export function getComposer(
 export function tenmokuikko(
   options: OptionsConfig & Omit<TypedFlatConfigItem, "files"> = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
-): FlatConfigComposer<TypedFlatConfigItem, ""> {
+): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const {
     jsx: enableJsx = true,
   } = options;

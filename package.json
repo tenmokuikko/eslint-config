@@ -12,7 +12,12 @@
   },
   "devDependencies": {
     "@tenmokuikko/eslint-common": "workspace:*",
+    "@tenmokuikko/eslint-react": "workspace:*",
+    "@tenmokuikko/eslint-vue": "workspace:*",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
+    "eslint-typegen": "catalog:",
+    "tsx": "catalog:",
     "typescript": "catalog:"
   }
 }

@@ -2,11 +2,16 @@ import type { StylisticCustomizeOptions } from "@stylistic/eslint-plugin";
 import type { ParserOptions } from "@typescript-eslint/parser";
 import type { Linter } from "eslint";
 import type { FlatGitignoreOptions } from "eslint-config-flat-gitignore";
+import type { ConfigNames, RuleOptions } from "./typegen";
 import type { VendoredPrettierOptions } from "./vender/prettier-types";
 
 export type Awaitable<T> = T | Promise<T>;
 
-export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord>, "plugins"> & {
+export interface Rules extends RuleOptions {}
+
+export type { ConfigNames };
+
+export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>, "plugins"> & {
   // Relax plugins type limitation, as most of the plugins did not have correct type info yet.
   /**
    * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.

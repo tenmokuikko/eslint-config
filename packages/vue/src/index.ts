@@ -1,6 +1,7 @@
-import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from "@tenmokuikko/eslint-common/types";
+import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from "@tenmokuikko/eslint-common/types";
 import type { Linter } from "eslint";
 import type { FlatConfigComposer } from "eslint-flat-config-utils";
+import type { VueOptionsConfig } from "./types";
 import { disables } from "@tenmokuikko/eslint-common/configs";
 import { flatConfigProps, getCommonConfig, getComposer, getOverrides, resolveSubOptions } from "@tenmokuikko/eslint-common/factory";
 import { isInEditorEnv } from "@tenmokuikko/eslint-common/utils";
@@ -14,9 +15,9 @@ const VuePackages = [
   "@slidev/cli",
 ];
 export function tenmokuikko(
-  options: OptionsConfig & Omit<TypedFlatConfigItem, "files"> & { vue?: boolean } = {},
+  options: VueOptionsConfig & Omit<TypedFlatConfigItem, "files"> = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
-): FlatConfigComposer<TypedFlatConfigItem, ""> {
+): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   let isInEditor = options.isInEditor;
   if (isInEditor == null) {
     isInEditor = isInEditorEnv();

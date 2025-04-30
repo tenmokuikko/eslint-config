@@ -1,4 +1,4 @@
-import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from "@tenmokuikko/eslint-common/types";
+import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from "@tenmokuikko/eslint-common/types";
 import type { Linter } from "eslint";
 import type { FlatConfigComposer } from "eslint-flat-config-utils";
 import { disables } from "@tenmokuikko/eslint-common/configs";
@@ -13,7 +13,7 @@ import { router } from "./plugins/router";
 export function tenmokuikko(
   options: OptionsConfig & Omit<TypedFlatConfigItem, "files"> = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
-): FlatConfigComposer<TypedFlatConfigItem, ""> {
+): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const {
     jsx: enableJsx = true,
   } = options;
