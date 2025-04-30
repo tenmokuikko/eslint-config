@@ -5,10 +5,7 @@ import { disables } from "@tenmokuikko/eslint-common/configs";
 import { flatConfigProps, getCommonConfig, getComposer, getOverrides, resolveSubOptions } from "@tenmokuikko/eslint-common/factory";
 import { isInEditorEnv } from "@tenmokuikko/eslint-common/utils";
 import { isPackageExists } from "local-pkg";
-import { jsx } from "./plugins/jsx";
-import { query } from "./plugins/query";
-import { react } from "./plugins/react";
-import { router } from "./plugins/router";
+import { jsx, query, react, router } from "./configs";
 
 export function tenmokuikko(
   options: OptionsConfig & Omit<TypedFlatConfigItem, "files"> = {},

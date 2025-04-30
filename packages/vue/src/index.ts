@@ -1,4 +1,4 @@
-import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from "@tenmokuikko/eslint-common/types";
+import type { Awaitable, ConfigNames, TypedFlatConfigItem } from "@tenmokuikko/eslint-common/types";
 import type { Linter } from "eslint";
 import type { FlatConfigComposer } from "eslint-flat-config-utils";
 import type { VueOptionsConfig } from "./types";
@@ -6,7 +6,7 @@ import { disables } from "@tenmokuikko/eslint-common/configs";
 import { flatConfigProps, getCommonConfig, getComposer, getOverrides, resolveSubOptions } from "@tenmokuikko/eslint-common/factory";
 import { isInEditorEnv } from "@tenmokuikko/eslint-common/utils";
 import { isPackageExists } from "local-pkg";
-import { vue } from "./plugins/vue-core";
+import { vue } from "./configs";
 
 const VuePackages = [
   "vue",
