@@ -24,13 +24,17 @@
     "build:watch": "rslib build --watch"
   },
   "dependencies": {
-    "@tenmokuikko/eslint-common": "workspace:*",
+    "@angular-eslint/eslint-plugin": "^19.4.0",
+    "@antfu/eslint-config": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "angular-eslint": "^19.4.0",
     "eslint": "catalog:",
-    "eslint-config-flat-gitignore": "catalog:",
     "eslint-flat-config-utils": "catalog:",
-    "local-pkg": "catalog:"
+    "lodash-es": "catalog:",
+    "typescript-eslint": "^8.32.0"
   },
   "devDependencies": {
-    "@rslib/core": "catalog:"
+    "@rslib/core": "catalog:",
+    "@types/lodash-es": "catalog:"
   }
 }

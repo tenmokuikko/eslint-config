@@ -20,19 +20,14 @@
     "build:watch": "rslib build --watch"
   },
   "dependencies": {
-    "@tenmokuikko/eslint-common": "workspace:*",
-    "@typescript-eslint/parser": "catalog:",
+    "@antfu/eslint-config": "catalog:",
     "eslint": "catalog:",
-    "eslint-config-flat-gitignore": "catalog:",
     "eslint-flat-config-utils": "catalog:",
-    "eslint-merge-processors": "catalog:",
-    "eslint-plugin-vue": "catalog:",
-    "eslint-plugin-vuejs-accessibility": "catalog:",
-    "eslint-processor-vue-blocks": "catalog:",
     "local-pkg": "catalog:",
-    "vue-eslint-parser": "catalog:"
+    "lodash-es": "catalog:"
   },
   "devDependencies": {
-    "@rslib/core": "catalog:"
+    "@rslib/core": "catalog:",
+    "@types/lodash-es": "catalog:"
   }
 }

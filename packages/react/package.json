@@ -24,18 +24,18 @@
     "build:watch": "rslib build --watch"
   },
   "dependencies": {
+    "@antfu/eslint-config": "catalog:",
     "@eslint-react/eslint-plugin": "catalog:",
     "@tanstack/eslint-plugin-query": "catalog:",
     "@tanstack/eslint-plugin-router": "catalog:",
-    "@tenmokuikko/eslint-common": "workspace:*",
     "eslint": "catalog:",
-    "eslint-config-flat-gitignore": "catalog:",
     "eslint-flat-config-utils": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
-    "local-pkg": "catalog:"
+    "lodash-es": "catalog:"
   },
   "devDependencies": {
-    "@rslib/core": "catalog:"
+    "@rslib/core": "catalog:",
+    "@types/lodash-es": "catalog:"
   }
 }

@@ -6,6 +6,7 @@ onlyBuiltDependencies:
   - unrs-resolver
 
 catalog:
+  '@antfu/eslint-config': ^4.13.0
   '@antfu/install-pkg': ^1.0.0
   '@clack/prompts': ^0.10.1
   '@eslint-community/eslint-plugin-eslint-comments': ^4.5.0
@@ -15,6 +16,7 @@ catalog:
   '@stylistic/eslint-plugin': ^4.2.0
   '@tanstack/eslint-plugin-query': ^5.73.3
   '@tanstack/eslint-plugin-router': ^1.115.0
+  '@types/lodash-es': ^4.17.12
   '@types/node': ^22.14.1
   '@typescript-eslint/eslint-plugin': ^8.31.0
   '@typescript-eslint/parser': ^8.31.0
@@ -46,6 +48,7 @@ catalog:
   globals: ^16.0.0
   jsonc-eslint-parser: ^2.4.0
   local-pkg: ^1.1.1
+  lodash-es: ^4.17.21
   toml-eslint-parser: ^0.10.0
   tsx: ^4.19.4
   typescript: ^5.8.3
